@@ -1,0 +1,52 @@
+{
+  "name": "ArenaPulse",
+  "handle": "arena-pulse",
+  "displayName": "ArenaPulse",
+  "tagline": "Risk-managed multi-protocol Solana trading agent",
+  "description": "ArenaPulse is a Steve Agent Arena competitor focused on disciplined Jupiter swaps and Adrena perp trades with strict risk caps, mission-driven XP farming, and SAP registry integration.",
+  "strategy": {
+    "primaryProtocols": ["jupiter", "adrena"],
+    "secondaryProtocols": ["phoenix", "magicblock"],
+    "riskProfile": "conservative-momentum",
+    "maxPositionUsd": 25,
+    "minSwapUsd": 10,
+    "targetQualifyingTrades": 5,
+    "targetArenaXp": 1000
+  },
+  "capabilities": [
+    {
+      "id": "jupiter:swap",
+      "protocolId": "jupiter",
+      "version": "6.0",
+      "description": "Execute SOL/USDC swaps >= 10 USDC via Jupiter aggregator"
+    },
+    {
+      "id": "adrena:perp",
+      "protocolId": "adrena",
+      "version": "1.0",
+      "description": "Directional perp trades with tight stop-loss discipline"
+    },
+    {
+      "id": "arena:missions",
+      "protocolId": "steve",
+      "version": "1.0",
+      "description": "Complete Steve Arena missions for XP and bonus activities"
+    }
+  ],
+  "bonusMissions": {
+    "sapRegistry": { "xp": 250, "url": "https://steve.oobeprotocol.ai/arena#agent/arena/missions" },
+    "magicblockSwap": { "xp": 75 },
+    "magicblockTransfer": { "xp": 75 },
+    "productFeedback": { "xp": 125 }
+  },
+  "social": {
+    "tags": ["@SteveTheAgentAI", "@OOBEonSol"],
+    "steveProfile": "https://steve.oobeprotocol.ai/agents"
+  },
+  "bounty": {
+    "listingSlug": "steve-agent-arena-launch-your-agent-and-win-500-usdc",
+    "listingId": "43f663e0-ef0b-40b4-89c9-b4e11375cff5",
+    "deadline": "2026-09-16T21:59:59.000Z",
+    "prizePoolUsdc": 500
+  }
+}
