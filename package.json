@@ -1,0 +1,28 @@
+{
+  "name": "steve-arena-pulse",
+  "version": "1.0.0",
+  "description": "Steve Agent Arena submission — strategy, tooling, and Superteam Earn integration for OOBE Protocol's 500 USDC bounty",
+  "type": "module",
+  "scripts": {
+    "market:scan": "tsx scripts/market-scanner.ts",
+    "verify": "tsx scripts/verify-requirements.ts",
+    "submit:earn": "tsx scripts/submit-to-earn.ts",
+    "check:jupiter": "tsx scripts/jupiter-quote.ts"
+  },
+  "keywords": [
+    "steve",
+    "oobe",
+    "solana",
+    "agent-arena",
+    "superteam-earn"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
